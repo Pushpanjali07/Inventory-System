@@ -37,11 +37,11 @@ CREATE TABLE purchase_orders (
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
-INSERT INTO products (name, description, price, quantity)
+INSERT INTO products (name,id, description, price, quantity)
 VALUES 
-('Mixer', 'multitasking', 1200.00, 10),
-('Phone', '4 GB RAM', 200.00, 15),
-('Keyboard', 'Mechanical Keyboard', 75.00, 25);
+('Mixer',1, 'multitasking', 1200.00, 10),
+('Phone',2, '4 GB RAM', 200.00, 15),
+('Keyboard',3, 'Mechanical Keyboard', 75.00, 25);
 
 -- Sample Sales Orders
 INSERT INTO sales_orders (product_id, quantity, total_price)
