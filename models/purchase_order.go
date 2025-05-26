@@ -5,6 +5,7 @@ import (
 )
 
 type PurchaseOrder struct {
+	ID        uint      `gorm:"primaryKey"`
 	ProductID uint      `json:"product_id"`
 	Quantity  int       `json:"quantity"`
 	Supplier  string    `json:"supplier"`
